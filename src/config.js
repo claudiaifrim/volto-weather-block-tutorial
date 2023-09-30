@@ -13,10 +13,30 @@
  * }
  */
 
+import WeatherEdit from './components/Blocks/Weather/Edit';
+import WeatherView from './components/Blocks/Weather/View';
+import worldSVG from '@plone/volto/icons/world.svg';
 // All your imports required for the config here BEFORE this line
 import '@plone/volto/config';
 
 export default function applyConfig(config) {
   // Add here your project's configuration here by modifying `config` accordingly
+  config.blocks.blocksConfig.weather = {
+    id: 'weather',
+    title: 'Weather',
+    icon: worldSVG,
+    group: 'common',
+    edit: WeatherEdit,
+    view: WeatherView,
+    restricted: false,
+    mostUsed: false,
+    sidebarTab: 1,
+    blocks: {},
+    security: {
+      addPermission: [],
+      view: [],
+    },
+  };
+
   return config;
 }

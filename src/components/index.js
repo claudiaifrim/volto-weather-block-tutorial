@@ -1,10 +1,4 @@
-/**
- * Add your components here.
- * @module components
- * @example
- * import Footer from './Footer/Footer';
- *
- * export {
- *   Footer,
- * };
- */
+import WeatherEdit from './components/Blocks/Weather/Edit';
+import WeatherView from './components/Blocks/Weather/View';
+
+export { WeatherView, WeatherEdit };
